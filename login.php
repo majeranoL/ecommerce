@@ -1,10 +1,10 @@
 <?php
-require_once("includes\\header.php");
+require_once("includes\\header.php")
 ?>
 
     <!-- Navbar -->
     <?php
-require_once("includes\\navbar.php");
+require_once("includes\\navbar.php")
 ?>
 
 
@@ -17,10 +17,10 @@ require_once("includes\\navbar.php");
                         <h4>Login to Your Account</h4>
                     </div>
                     <div class="card-body">
-                        <form action="#" method="POST">
+                        <form action="authLogin.php" method="POST">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>

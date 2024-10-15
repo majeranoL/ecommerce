@@ -7,7 +7,7 @@ $confirmpassword = $_POST["ConfirmPassword"];
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(trim($password) == trim($confirmpassword)){
         $host = "localhost";
-        $database = "ecommbatch1";
+        $database = "ecommerce";
         $dbusername = "root";
         $dbpassword = "";
         
