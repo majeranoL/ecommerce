@@ -25,8 +25,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->execute();
             $users = $stmt->fetchAll();
             if($users){
-                
-                if($password == $users[0]["password"]){
+          
+                if(password_verify($password,$users[0]["password"])){
+                //if($password == $users[0]["password"]){
                     echo "login successful";
                     $_SESSION["fullname"] = $users[0]["fullname"];
                 } else {
