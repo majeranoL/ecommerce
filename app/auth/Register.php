@@ -52,5 +52,4 @@ $_SESSION["success"] = "Registration Successful";
 
 //insert data
 
-
 ?>

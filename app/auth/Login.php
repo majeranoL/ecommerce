@@ -25,11 +25,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->execute();
             $users = $stmt->fetchAll();
             if($users){
-          
                 if(password_verify($password,$users[0]["password"])){
-                //if($password == $users[0]["password"]){
-                    echo "login successful";
+                    $_SESSION = [];
+                    session_regenerate_id(true);
+                    $_SESSION["user_id"] = $users[0]["id"];
+                    $_SESSION["username"] = $users[0]["username"];
                     $_SESSION["fullname"] = $users[0]["fullname"];
+                    $_SESSION["is_admin"] = $users[0]["is_admin"];
+
+                    header("location: /index.php");
                 } else {
                     echo "password did not match";
                 }
@@ -41,9 +45,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "Connection Failed: " . $e->getMessage();
         }
 
-
-    
 }
-
-
 ?>

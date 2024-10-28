@@ -47,7 +47,7 @@
                                 <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="username" class="form-label">Email Address</label>
+                                <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter your email" required>
                             </div>
                             <div class="mb-3">
@@ -64,14 +64,11 @@
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <p>Already have an account? <a href="login.html" class="text-primary">Login here</a></p>
+                        <p>Already have an account? <a href="login.php" class="text-primary">Login here</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <?php  require_once(ROOT_DIR. "includes/footer.php"); ?>
